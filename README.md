@@ -1,4 +1,4 @@
-# BlogVoyage_project# BlogVoyage
+# BlogVoyage
 ## _Social network for bloggers and even more_
 
 [![N|Solid](https://static.djangoproject.com/img/logos/django-logo-negative.svg)](https://www.djangoproject.com/)
