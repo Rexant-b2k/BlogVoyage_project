@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Зарегистрироваться{% endblock %}
+{% block content %}
+  {% url 'users:signup' as main_act %}
+  {% url 'users:login' as add_link %}
+  {% include 'includes/form.html' with main_act=main_act form_header='Регистрация на сайте' button_name='Зарегистрироваться' add_act='Уже зарегистрированы?' add_url=add_link %}
+{% endblock %}

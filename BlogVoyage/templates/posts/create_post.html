@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% comment %} {% block title %}Новый пост{% endblock %} {% endcomment %}
+{% block content %}
+  {% if is_edit %}
+    {% url action_url as main_act %}
+    {% with 'Сохранить' as btn_name %}
+    {% include 'includes/form.html' with main_act=main_act form_header='Редактировать пост' button_name=btn_name %}
+    {% endwith %}
+  {% else %}
+    {% with 'Добавить' as btn_name %}
+    {% url action_url as main_act %}
+    {% include 'includes/form.html' with main_act=main_act form_header='Новый пост' button_name=btn_name %}
+    {% endwith %}
+  {% endif %}
+  {% comment %} {% url action_url as main_act %}
+  {% include 'includes/form.html' with main_act=main_act form_header='Новый пост' button_name=btn_name %}
+   {% endcomment %}
+{% endblock %}

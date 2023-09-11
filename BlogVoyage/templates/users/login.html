@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Войти{% endblock %}
+{% block content %}
+  {% url action_url as main_act %}
+  {% url 'users:password_reset_form' as add_link %}
+  {% include 'includes/form.html' with main_act=main_act form_header='Войти на сайт' button_name='Войти на сайт' add_act='Забыли пароль?' add_url=add_link %}
+{% endblock %}
